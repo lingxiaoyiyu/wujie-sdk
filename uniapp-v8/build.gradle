@@ -26,7 +26,7 @@ publishing {
     publications {
         aar(MavenPublication) {
             artifactId 'uniapp-v8'
-            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+            artifact('libs/uniapp-v8-release.aar')
         }
     }
 }

@@ -26,7 +26,7 @@ publishing {
     publications {
         aar(MavenPublication) {
             artifactId 'DCUniMPSDK'
-            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+            artifact('libs/DCUniMPSDK-V2-release.aar')
         }
     }
 }
