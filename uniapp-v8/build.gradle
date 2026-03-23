@@ -1,22 +1,16 @@
-plugins {
-    id 'maven-publish'
-    id 'com.android.library'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
-    namespace 'com.dcloud.uniapp'
-    compileSdk 34
+    compileSdkVersion 29
+    
     defaultConfig { 
-        minSdk 21
+        minSdkVersion 21
     }
     
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-    
-    kotlinOptions {
-        jvmTarget = '17'
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -24,7 +18,7 @@ publishing {
     publications {
         aar(MavenPublication) {
             artifactId 'uniapp-v8'
-            artifact('libs/uniapp-v8-release.aar')
+            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
         }
     }
 }
