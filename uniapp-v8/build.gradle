@@ -1,0 +1,18 @@
+plugins {
+    id 'maven-publish'
+    id 'com.android.library'
+}
+
+android {
+    compileSdk 34
+    defaultConfig { minSdk 21 }
+}
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            artifactId 'uniapp-v8'
+            artifact('libs/uniapp-v8-release.aar')
+        }
+    }
+}
