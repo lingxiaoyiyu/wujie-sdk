@@ -1,16 +1,19 @@
-apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
+plugins {
+    id 'maven-publish'
+    id 'com.android.library'
+}
 
 android {
-    compileSdkVersion 29
+    namespace 'com.dcloud.uniapp'
+    compileSdk 31
     
     defaultConfig { 
-        minSdkVersion 21
+        minSdk 21
     }
     
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 
