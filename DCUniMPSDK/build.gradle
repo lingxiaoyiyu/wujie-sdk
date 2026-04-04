@@ -3,9 +3,23 @@ plugins {
     id 'com.android.library'
 }
 
+repositories {
+    google()
+    mavenCentral()
+}
+
 android {
-    compileSdk 34
-    defaultConfig { minSdk 21 }
+    namespace 'com.dcloud.sdk'
+    compileSdk 31
+    
+    defaultConfig { 
+        minSdk 21
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
 }
 
 publishing {
